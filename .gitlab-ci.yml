@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  environment:
+    name: Production
+    url: https://5stars.net/
+  only:
+    - master
+  script:
+    - export DATE=`date '+%Y-%m-%d-%H-%M'`
+    - export NEWDIR=/home/server/builds/5stars.net-$DATE
+    - export OLDDIR=`pwd`
+    - cp -r $OLDDIR $NEWDIR
+    - cd $NEWDIR
+    - rm -rf ~/www
+    - ln -s $NEWDIR ~/www
+    - rm -rf ~/www/.git

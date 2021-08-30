@@ -1,0 +1,194 @@
+extends common/layout
+
+block content
+    main.main
+        .main-offer.main-offer--yellow
+            .container-width
+                .main-offer__head
+                    h1.main-offer__heading.wow.animate__animated.animate__fadeIn
+                        | Гипербыстрая <br>
+                        .stars(data-stars='1')
+                            svg.star.rating.hidden-star(height='40' width='40' data-rating='1')
+                                polygon(points="272 30 260.244 36.18 262.489 23.09 252.979 13.82 266.122 11.91 272 0 277.878 11.91 291.021 13.82 281.511 23.09 283.756 36.18" transform="translate(-252)" style='fill-rule:nonzero;')
+                            svg.star.rating(height='40' width='40' data-rating='2')
+                                polygon(points="272 30 260.244 36.18 262.489 23.09 252.979 13.82 266.122 11.91 272 0 277.878 11.91 291.021 13.82 281.511 23.09 283.756 36.18" transform="translate(-252)" style='fill-rule:nonzero;')
+                            svg.star.rating(height='40' width='40' data-rating='3')
+                                polygon(points="272 30 260.244 36.18 262.489 23.09 252.979 13.82 266.122 11.91 272 0 277.878 11.91 291.021 13.82 281.511 23.09 283.756 36.18" transform="translate(-252)" style='fill-rule:nonzero;')
+                            svg.star.rating(height='40' width='40' data-rating='4')
+                                polygon(points="272 30 260.244 36.18 262.489 23.09 252.979 13.82 266.122 11.91 272 0 277.878 11.91 291.021 13.82 281.511 23.09 283.756 36.18" transform="translate(-252)" style='fill-rule:nonzero;')
+                            svg.star.rating(height='40' width='40' data-rating='5')
+                                polygon(points="272 30 260.244 36.18 262.489 23.09 252.979 13.82 266.122 11.91 272 0 277.878 11.91 291.021 13.82 281.511 23.09 283.756 36.18" transform="translate(-252)" style='fill-rule:nonzero;')
+                            svg.star.rating(height='40' width='40' data-rating='6')
+                                polygon(points="272 30 260.244 36.18 262.489 23.09 252.979 13.82 266.122 11.91 272 0 277.878 11.91 291.021 13.82 281.511 23.09 283.756 36.18" transform="translate(-252)" style='fill-rule:nonzero;')
+                        | раскрутка и продвижение <img src='images/arrow-circle.svg' alt='arrow'> <span class="text-underline">во всех</span> социальных сетях
+                    a.btn.main-offer__btn.sliding-link.wow.animate__animated.animate__fadeInUp(href='#order-section') Начать прямо сейчас
+                        svg.icon-bolt
+                            use(xlink:href='images/sprite.svg#icon-bolt')
+                .main-offer__benefits.owl-theme
+                    .main-offer__benefits-item.wow.animate__animated.animate__fadeInRight
+                        .main-offer__benefits-img
+                            img(src='images/quality.svg' alt='quality')
+                        span.main-offer__benefits-heading Качество <br>и эффективность
+                        p.main-offer__benefits-text Разработанный алгоритм помогает создавать и удерживать положительную репутацию, которая преумножает вложенные на продвижения средства
+                    .main-offer__benefits-item.wow.animate__animated.animate__fadeInRight.animate__delay-02s
+                        .main-offer__benefits-img
+                            img(src='images/real-users.svg' alt='real users')
+                        span.main-offer__benefits-heading Реальные <br> пользователи
+                        p.main-offer__benefits-text Настоящие отзывы от реальных пользователей. Никаких автоматических <br> накруток и ботов
+                    .main-offer__benefits-item.wow.animate__animated.animate__fadeInRight.animate__delay-03s
+                        .main-offer__benefits-img
+                            img(src='images/safety.svg' alt='safety and anonymous')
+                        span.main-offer__benefits-heading Безопасность <br> и анонимность
+                        p.main-offer__benefits-text Мы не разглашаем персональную информацию о наших клиентах третьим лицам. Существует строгая система защиты сведений
+                    .main-offer__benefits-item.wow.animate__animated.animate__fadeInRight.animate__delay-04s
+                        .main-offer__benefits-img
+                            img(src='images/manager.svg' alt='personal manager')
+                        span.main-offer__benefits-heading Личный менеджер <br> и техподдержка 24/7
+                        p.main-offer__benefits-text Каждому клиенту предоставляется личный менеджер. Быстро помогаем в тикетах или чате в любое время суток
+                // TEMP LINKS:START
+                br
+                br
+                br
+                br
+                a.header-links__soc.header-links__soc-btn(href='order.html')
+                    | Заказ
+                a.header-links__soc.header-links__soc-btn(href='order-detail.html')
+                    | Оплата
+                a.header-links__soc.header-links__soc-btn(href="#" data-fancybox="" data-src="#webmoney-modal" data-touch='false')
+                    | webmoney modal
+                a.header-links__soc.header-links__soc-btn(href="#" data-fancybox="" data-src="#bitcoin-modal" data-touch='false')
+                    | BTC modal
+                // TEMP LINKS:END
+
+
+
+        .main-form(id='order-section')
+            .container-width
+                h2.main-form__heading Магазин аккаунтов
+                .main-filter
+                    .main-filter__head
+                        a.main-filter__select(href="#" data-fancybox="" data-src="#select-modal" data-touch='false')
+                            .main-filter__select-img
+                                img(src='images/sprite/insta.svg' alt='insta')
+                            .main-filter__select-text Instagram
+                            svg.icon-arrow
+                                use(xlink:href='images/sprite.svg#icon-arrow')
+                        label.txt-input
+                            .txt-input__wrap
+                                input.txt-input__field.main-filter__input(type='text' placeholder='Ссылка на пост или аккаунт' name="url")
+                    .main-filter__body
+                    //-    body items will be appear here
+                    .main-filter__bottom
+                        .main-filter__total
+                            | Итого
+                            span.js-main-filter__total.main-filter__total-main 0
+                        a.main-filter__btn.btn.btn-light Оформить
+
+        .possibilities(id='services-section')
+            .container-width
+                h4.main-heading.possibilities__main-heading Наши возможности
+                .possibilities__container
+                    .possibilities__item.wow.animate__animated.animate__fadeInUp
+                        .possibilities__head
+                            .possibilities__img
+                                img(src='images/sprite/insta.svg' alt='insta')
+                            span.possibilities__heading Instagram
+                        .possibilities__text
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Лайки в инстаграме
+                                span.possibilities__text-item-right 0,89 ₽/шт
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Подписчики в инстаграме
+                                span.possibilities__text-item-right скоро
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Комментарии в инстаграме
+                                span.possibilities__text-item-right скоро
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Просмотры в инстаграме
+                                span.possibilities__text-item-right скоро
+                    .possibilities__item.wow.animate__animated.animate__fadeInUp.animate__delay-01s
+                        .possibilities__head
+                            .possibilities__img
+                                img(src='images/sprite/fb.svg' alt='fb')
+                            span.possibilities__heading Facebook
+                        .possibilities__text
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Лайки в фейсбуке
+                                span.possibilities__text-item-right 0,89 ₽/шт
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Подписчики в фейсбуке
+                                span.possibilities__text-item-right скоро
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Комментарии в фейсбуке
+                                span.possibilities__text-item-right скоро
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Просмотры в фейсбуке
+                                span.possibilities__text-item-right скоро
+                    .possibilities__item.wow.animate__animated.animate__fadeInUp.animate__delay-02s
+                        .possibilities__head
+                            .possibilities__img
+                                img(src='images/sprite/youtube.svg' alt='youtube')
+                            span.possibilities__heading Youtube
+                        .possibilities__text
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Лайки в ютубе
+                                span.possibilities__text-item-right 0,06 ₽/шт
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Подписчики в ютубе
+                                span.possibilities__text-item-right 0,12 ₽/шт
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Комментарии в ютубе
+                                span.possibilities__text-item-right скоро
+                            .possibilities__text-item
+                                span.possibilities__text-item-left Просмотры в ютубе
+                                span.possibilities__text-item-right скоро
+        .contacts(id='contacts-section').wow.animate__animated.animate__fadeInUp
+            h5.contacts__heading.main-heading Контакты
+            .contacts__container
+                .contacts__item
+                    a.contacts__item-link(href='tg://resolve?domain=5stars.net')
+                        .contacts__item-link-img
+                            svg.icon-tg
+                                use(xlink:href='images/sprite.svg#icon-tg')
+                        | Telegram
+                    span.contacts__item-text С понедельника по пятницу, 9:00 – 18:00
+                    a.contacts__item-mail(href='tg://resolve?domain=5stars.net') @5stars.net
+                .contacts__item
+                    a.contacts__item-link(href='mailto:support@5stars.net')
+                        .contacts__item-link-img
+                            svg.icon-mail
+                                use(xlink:href='images/sprite.svg#icon-mail')
+                        | E-mail
+                    span.contacts__item-text Ответим в рабочее время в течение часа
+                    a.contacts__item-mail(href='mailto:support@5stars.net') support@5stars.net
+                .contacts__item
+                    a.contacts__item-link.js-show-faq
+                        .contacts__item-link-img
+                            svg.icon-faq
+                                use(xlink:href='images/sprite.svg#icon-faq')
+                        | FAQ's
+                    span.contacts__item-text Часто задаваемые вопросы
+                    a.contacts__item-btn.js-show-faq Показать все
+                        .contacts__item-arrow
+                            svg.icon-arrow
+                                use(xlink:href='images/sprite.svg#icon-arrow')
+                //
+                //
+                .accardeon.accardeon--invisible.accardeon--default
+                    .accardeon__container
+                        .accardeon__item.active
+                            span.accardeon__heading Откуда вы берете аккаунты?
+                            p.accardeon__text(style='display: block;')
+                                | Whether you&apos;re an independent artist, blogger, small business, or just a regular Instagram user, LikeBlaster is your best Instagram marketing choice to get the likes you need. Simply choose your preferred package and follow our easy checkout steps. Buying IG likes may be frowned upon by Instagram&apos;s terms of service, but it is a completely legal process and 100% safe.
+                            a.accardeon__link(href='#')
+                        .accardeon__item
+                            span.accardeon__heading В каком виде я получаю доступ к аккаунту?
+                            p.accardeon__text
+                                | No, never. We do not ask for your password because we do not need your password. To process your order, your photo URL or username is enough for us. Please, do not give your password to anyone or any services.
+                            a.accardeon__link(href='#')
+                        .accardeon__item
+                            span.accardeon__heading Не удалось войти аккаунт. Что делать?
+                            p.accardeon__text
+                                | Absolutely. We do not use fake accounts like any other website. We only use real &amp; active users in our packages. All of our services like Instagram followers or Twitter retweets are totally real. You can use our service without any kind of risk.
+                            a.accardeon__link(href='#')
+

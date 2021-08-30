@@ -1,0 +1,61 @@
+extends common/layout
+
+block content
+    main.main
+        .main-offer
+            .container-width
+                .main-offer__head.basket-heading
+                    h1.main-offer__heading.wow.animate__animated.animate__zoomIn Корзина
+                    a.basket-link(href='basket.html')
+                        svg.icon-bag
+                            use(xlink:href='images/sprite.svg#icon-bag')
+                        span.basket-link__count 0
+                .basket-container
+                    .main-table.main-table--detail.wow.animate__animated.animate__fadeIn
+                        .main-table--detail-head
+                            label.form__check.check(class='js-select-all')
+                                input.check__input.visually-hidden(type='checkbox')
+                                span.check__box
+                                span.check__text Выбрать все
+                            a.delete-selected Удалить выбранное
+                        .main-table__body
+                            .main-table__body-item
+                                .main-table__body-item-check
+                                    label.form__check.check
+                                        input.check__input.visually-hidden(type='checkbox')
+                                        span.check__box
+                                        span.check__text
+                                .main-table__body-item-platform
+                                    svg.icon-country
+                                        use(xlink:href='images/sprite-countries.svg#sz')
+                                    | AR
+                                .main-table__body-item-describe Аккаунты Facebook Аргентина | Почта @outlook.com/@hotmail.com в комплекте (не подтверждена по смс) | Useragent и Cookies в комплекте | Добавлен аватар | Пол: Ж | Имена EN | Рег. AR IP
+                                .main-table__body-item-cost от 11 <span class="color-gray"> $ / шт.</span>
+                                .main-table__body-item-controls
+                                    select.js-choice.select-main
+                                        option 1
+                                        option 2
+                                        option 5
+                            .main-table__body-item
+                                .main-table__body-item-check
+                                    label.form__check.check
+                                        input.check__input.visually-hidden(type='checkbox')
+                                        span.check__box
+                                        span.check__text
+                                .main-table__body-item-platform
+                                    svg.icon-country
+                                        use(xlink:href='images/sprite-countries.svg#sz')
+                                    | AR
+                                .main-table__body-item-describe Аккаунты Facebook Аргентина | Почта @outlook.com/@hotmail.com в комплекте (не подтверждена по смс) | Useragent и Cookies в комплекте | Добавлен аватар | Пол: Ж | Имена EN | Рег. AR IP
+                                .main-table__body-item-cost от 11 <span class="color-gray"> $ / шт.</span>
+                                .main-table__body-item-controls
+                                    select.js-choice.select-main
+                                        option 1
+                                        option 2
+                                        option 5
+                    .checkout
+                        .checkout__item
+                            .checkout__item--left Ваш заказ
+                            .checkout__item--right 9 аккаунтов
+                        a.btn.checkout__btn(href='order.html') Перейти к оформлению
+                        span.checkout__text Способ оплаты и контактную информацию укажите далее при оформлении заказа

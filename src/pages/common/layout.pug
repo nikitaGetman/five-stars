@@ -1,0 +1,32 @@
+doctype html
+html(lang="ru")
+    block head
+        head
+            meta(charset="utf-8")
+            title 5stars
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+            meta(name="theme-color" content="#FFBF06")
+            link(rel="icon" type="image/x-icon" href="images/favicon/favicon.ico")
+            link(rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16")
+            link(rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32")
+            link(rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png")
+            link(rel="stylesheet" href="css/libs.min.css")
+            link(rel="stylesheet" href="css/style.min.css")
+    body
+        #preload
+            .preload-container
+                .gooey
+                    span.dot
+                    .dots
+                        span
+                        span
+                        span
+        block header
+            include header
+        block content
+        block footer
+            include footer
+        block scripts
+            script(src='js/libs.min.js')
+            script(src='js/main.min.js')

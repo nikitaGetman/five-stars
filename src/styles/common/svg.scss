@@ -1,0 +1,80 @@
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block;
+    stroke-width: 0;
+    transition: all 0.2s ease-out;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+a:hover [class^="icon-"],
+a:hover [class*=" icon-"] {
+    transition: all 0.2s ease-in;
+}
+
+.icon-bolt {
+    width: 12px;
+    height: 20px;
+}
+
+.icon-arrow {
+    width: 14px;
+    height: 10px;
+}
+
+.icon-tg {
+    width: 12px;
+    height: 10px;
+}
+
+.icon-mail {
+    width: 14px;
+    height: 9px;
+}
+
+.icon-faq {
+    width: 12px;
+    height: 12px;
+}
+
+.icon-subscribers {
+    width: 24px;
+    height: 17px;
+}
+
+.icon-likes {
+    width: 24px;
+    height: 18px;
+    left: 1px;
+    position: relative;
+}
+
+.icon-comments {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-views {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-star {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-tg-filled {
+    width: 21px;
+    height: 21px;
+}
+
+.icon-skype-filled {
+    width: 21px;
+    height: 21px;
+}
+
+.icon-copy {
+    width: 18px;
+    height: 14px;
+}

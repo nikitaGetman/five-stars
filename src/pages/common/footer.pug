@@ -1,0 +1,217 @@
+footer(id="contacts-block")
+    .container-width
+        .footer-container
+            .footer-container__left
+                .wrap-footer
+                    a.wrap-footer__link Условия использования
+                    a.wrap-footer__link Политика конфиденциальности
+                span.copyright 5stars.net © Copyright <script>document.write(new Date().getFullYear());</script>
+            .footer-container__right
+                .footer-right
+                    span.footer-right__heading Контакты
+                    .footer-links
+                        a.footer-links__item(href='tg://resolve?domain=5stars.net')
+                            svg.icon-tg
+                                use(xlink:href='images/sprite.svg#icon-tg')
+                        a.footer-links__item(href='mailto:support@5stars.net')
+                            svg.icon-mail
+                                use(xlink:href='images/sprite.svg#icon-mail')
+// Modals
+#select-modal.popup.popup__select
+    .fancy
+        .fancy-inner
+            .modal-select
+                //- media will be appear here
+
+#registration-modal.popup.popup__auth
+    .fancy
+        .fancy-inner
+            .modal-auth
+                .modal-auth__container
+                    .modal-auth__heading Регистрация
+                    form(action='' id='modal-registration__form')
+                        .modal-auth__form
+                            label.txt-input
+                                .txt-input__wrap
+                                    input.txt-input__field(type='email' name='email' placeholder='E-mail' required='' autocomplete="username" id="register-email")
+                            label.txt-input
+                                .txt-input__wrap
+                                    input.txt-input__field(type='password' name='password' placeholder='Пароль' required='' autocomplete="new-password" id="register-password")
+                            .modal-auth__social
+                                .modal-auth__social-type
+                                    label.modal-auth__check.js-contact-switch
+                                        input.modal-auth__check-input(type='radio' name='contact' value="telegram" data-placeholder='@telegram-login' checked='')
+                                        span.modal-auth__check-radio Telegram
+                                    label.modal-auth__check.js-contact-switch
+                                        input.modal-auth__check-input(type='radio' name='contact' value="skype" data-placeholder='live:skype-login')
+                                        span.modal-auth__check-radio Skype
+                                .modal-auth__social-input
+                                    label.txt-input
+                                        .txt-input__wrap
+                                            input.txt-input__field(type='text' placeholder='@telegram-login' required='' class='js-contact__field' id="register-social")
+                                    label.form__check.check.check__black
+                                        input.check__input.visually-hidden(type='checkbox' checked='' name="agreement")
+                                        span.check__box
+                                        span.check__text Согласен с условиями пользовательского соглашения <br>и политикой конфиденциальности
+                            .modal-auth__controls
+                                span(id="register-message")
+                                button.btn(type='submit')
+                                    span.overlay-btn
+                                        span Продолжить
+                    .modal-auth__bottom
+                        span.modal-auth__bottom-text Есть аккаунт?
+                        a.modal-auth__bottom-link(href='#login-modal' data-fancybox='' data-touch='false') Войти
+                .modal-auth__success
+                    span.modal-auth__final-heading Reg
+                    span.modal-auth__final-text Спасибо
+                    a.btn(href='#' class='js-close-modal-btn')
+                        span.overlay-btn
+                            span Закрыть окно
+
+#login-modal.popup.popup__auth
+    .fancy
+        .fancy-inner
+            .modal-auth
+                .modal-auth__container
+                    .modal-auth__heading Вход
+                    form(action='' id='modal-login__form')
+                        .modal-auth__form
+                            label.txt-input
+                                .txt-input__wrap
+                                    input.txt-input__field(type='email' name='email' placeholder='Электронная почта' required='' autocomplete="username" id="login-email")
+                            label.txt-input.no-mg
+                                .txt-input__wrap
+                                    input.txt-input__field(type='password' name='password' placeholder='Пароль' required='' autocomplete="current-password" id="login-password")
+                            .auth-double
+                                label.form__check.check.check__black.check__black-xl
+                                    input.check__input.visually-hidden(type='checkbox' checked='' name="remember")
+                                    span.check__box
+                                    span.check__text Запомнить
+                                a.modal-auth__bottom-link(href='#restore-modal' data-fancybox='' data-touch='false') Забыли пароль?
+                            .modal-auth__controls
+                                span(id="login-message")
+                                button.btn(type='submit')
+                                    span.overlay-btn
+                                        span Войти
+                    .modal-auth__bottom
+                        span.modal-auth__bottom-text Нет аккаунта?
+                        a.modal-auth__bottom-link(href='#registration-modal' data-fancybox='' data-touch='false') Зарегистрируйтесь
+                .modal-auth__success
+                    span.modal-auth__final-heading Reg
+                    span.modal-auth__final-text Спасибо
+                    a.btn(href='#' class='js-close-modal-btn')
+                        span.overlay-btn
+                            span Закрыть окно
+
+#restore-modal.popup.popup__auth
+    .fancy
+        .fancy-inner
+            .modal-auth
+                .modal-auth__container
+                    .modal-auth__heading.modal-auth__heading--restore Забыли пароль?
+                    .modal-auth__subheading Введите E-mail для отправки письма с восстановлением пароля
+                    form(action='' id='modal-restore__form')
+                        .modal-auth__form
+                            label.txt-input
+                                .txt-input__wrap
+                                    input.txt-input__field(type='email' name='email' placeholder='E-mail' required='' autocomplete="username" id="modal-restore-email")
+                            .modal-auth__controls.modal-auth__controls--restore
+                                span(id="restore-message")
+                                button.btn(type='submit')
+                                    span.overlay-btn
+                                        span Восстановить
+
+#webmoney-modal.popup.popup__balance
+    .fancy
+        .fancy-inner
+            .modal-balance
+                .modal-balance__heading.main-heading Пополнение баланса через Webmoney
+                .modal-balance__text
+                    | Для пополнения счета через WebMoney отправьте без кода протекции
+                    .copy-btn__container
+                        .copy-btn
+                            span.copy-text.js-copy-content $1252
+                            a.js-copy-btn
+                                svg.icon-copy
+                                    use(xlink:href='images/sprite.svg#icon-copy')
+                        span.hint-window Скопировано
+                    | на счет
+                    .copy-btn__container
+                        .copy-btn
+                            span.copy-text.js-copy-content Z769115181299
+                            a.js-copy-btn
+                                svg.icon-copy
+                                    use(xlink:href='images/sprite.svg#icon-copy')
+                        span.hint-window Скопировано
+                    | с комментарием
+                    .copy-btn__container
+                        .copy-btn
+                            span.copy-text.js-copy-content 2-008319
+                            a.js-copy-btn
+                                svg.icon-copy
+                                    use(xlink:href='images/sprite.svg#icon-copy')
+                        span.hint-window Скопировано
+                .modal-balance__text Деньги будут зачислены автоматически в течение 15 минут.
+
+                p.modal-balance__text-danger.text-danger ВНИМАНИЕ! Деньги, отправленные без соответствующего комментария, не будут зачислены на баланс.
+                a.btn.btn-light(href='#')
+                    span.overlay-btn
+                        span Понятно
+
+#bitcoin-modal.popup.popup__balance
+    .fancy
+        .fancy-inner
+            .modal-balance
+                .modal-balance__heading.main-heading Пополнение баланса через Bitcoin
+                .modal-balance__text
+                    | Для пополнения счета на 100 $ <br>
+                    | отправьте
+                    .copy-btn__container
+                        .copy-btn
+                            span.copy-text.js-copy-content 0.0001556656
+                            a.js-copy-btn
+                                svg.icon-copy
+                                    use(xlink:href='images/sprite.svg#icon-copy')
+                        span.hint-window Скопировано
+                    | BTC на один из кошельков
+                .accardeon.accardeon--detail
+                    .accardeon__container
+                        .accardeon__item.active
+                            span.accardeon__heading Оплата на segwit кошелек
+                            .accardeon__block(style='display: block;')
+                                .accardeon__block-container
+                                    .accardeon__block-left
+                                        img.accardeon__block-img(src='images/qr.png' alt='QR Code')
+                                    .accardeon__block-right
+                                        span.accardeon__block-text Адрес Segwit кошелька
+                                        .accardeon__block-info
+                                            .copy-btn__container
+                                                .copy-btn
+                                                    span.copy-text.js-copy-content 325fdhsdg43yhdshg4gYTFFa
+                                                    a.js-copy-btn
+                                                        svg.icon-copy
+                                                            use(xlink:href='images/sprite.svg#icon-copy')
+                                                span.hint-window Скопировано
+                            a.accardeon__link(href='#')
+                        .accardeon__item
+                            span.accardeon__heading Оплата на bitcoin кошелек
+                            .accardeon__block
+                                .accardeon__block-container
+                                    .accardeon__block-left
+                                        img.accardeon__block-img(src='images/qr.png' alt='QR Code')
+                                    .accardeon__block-right
+                                        span.accardeon__block-text Адрес Bitcoin кошелька
+                                        .accardeon__block-info
+                                            .copy-btn__container
+                                                .copy-btn
+                                                    span.copy-text.js-copy-content 325fdhsdg43yhdshg4gYTFFa
+                                                    a.js-copy-btn
+                                                        svg.icon-copy
+                                                            use(xlink:href='images/sprite.svg#icon-copy')
+                                                span.hint-window Скопировано
+                            a.accardeon__link(href='#')
+
+                p.modal-balance__text-danger.text-danger ВНИМАНИЕ! Зачисление денег на счет автоматическоеи может занимать до суток.
+                a.btn.btn-light(href='#')
+                    span.overlay-btn
+                        span Понятно

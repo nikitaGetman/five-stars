@@ -1,0 +1,98 @@
+.txt-input {
+    position: relative;
+    display: block;
+
+    &__label {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 15px;
+        color: #9D9DB0;
+        margin-bottom: 9px;
+    }
+
+    &--double {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .txt-input {
+            width: 47%;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__field {
+        position: relative;
+        width: 100%;
+        min-height: 32px;
+        border: 0;
+        border-bottom: 1px solid #272727;
+        background-color: transparent;
+        font-size: 15px;
+        line-height: 17px;
+        color: #000000;
+        padding: 0 40px 8px 0;
+        box-sizing: border-box;
+        @include media-tablet {
+            height: 40px;
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        &:focus, &:active {
+            outline: none;
+        }
+    }
+
+    &__field::placeholder {
+        font-size: 15px;
+        line-height: 17px;
+        color: #000000;
+        @include media-tablet {
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
+
+    &__textarea {
+        position: relative;
+        width: 100%;
+        border: 1px solid #F5F5F7;
+        box-sizing: border-box;
+        border-radius: 20px;
+        resize: none;
+        height: 90px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #A1A1A6;
+        padding-top: 12px;
+        outline: none;
+        padding-left: 12px;
+        background-color: transparent;
+        display: block;
+    }
+
+    &__textarea::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #A1A1A6;
+    }
+
+    &__wrap .help-block.help-block-error {
+        color: #ee5162;
+    }
+}
+
+::-webkit-resizer {
+    background-color: transparent;
+}

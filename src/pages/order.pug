@@ -1,0 +1,56 @@
+extends common/layout
+
+block content
+    main.main
+        .main-offer
+            .container-width
+                .order
+                    .order__left
+                        .order-form
+                            h1.order-form__heading.main-heading Оформление заказа
+                            span#order-form-message
+                            form(action='')
+                                .order-form__form
+                                    label.txt-input
+                                        .txt-input__wrap
+                                            input.txt-input__field(type='text' placeholder='Электронная почта' name="email")
+                                    label.txt-input
+                                        .txt-input__wrap
+                                            input.txt-input__field(type='password' placeholder='Пароль' name="password")
+                                    label.txt-input
+                                        .txt-input__wrap
+                                            input.txt-input__field(type='password' placeholder='Повторить пароль' name="passwordConfirm")
+                                    .order-form__contacts
+                                        h5.order-form__smheading Для контакта
+                                        .order-form__form--double
+                                            label.txt-input
+                                                .txt-input__wrap
+                                                    input.txt-input__field(type='text' placeholder='Telegram' name="telegram")
+                                                    svg.icon-tg-filled
+                                                        use(xlink:href='images/sprite.svg#icon-tg-filled')
+                                            span.divider-text или
+                                            label.txt-input
+                                                .txt-input__wrap
+                                                    input.txt-input__field.input-skype(type='text' placeholder='Skype' name="skype")
+                                                    svg.icon-skype-filled
+                                                        use(xlink:href='images/sprite.svg#icon-skype-filled')
+                        .payment
+                            h4.payment__heading.main-heading Способ оплаты
+                            .payment__accs
+                                //- payment methods
+
+                    .order__right
+                        .total
+                            .total__link
+                                .total__link-img
+                                    img(data-src='images/sprite/insta.svg' alt='insta')
+                                a.total__link-text(target="_blank") instagram.com/p/CRpjCgUpoWM/
+                            .total__table
+                                //- items will appear here
+                            .total__price
+                                .total__price-text Итого
+                                .total__price-number.after-val 8890
+                            .total__controls
+                                button.btn.btn-light.submit-order-guest(type='submit') Оплатить
+                                a.btn.btn-transparent(href="/#order-section") Редактировать
+

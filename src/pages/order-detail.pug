@@ -1,0 +1,33 @@
+extends common/layout
+
+block content
+    main.main
+        .detail-container
+            .top-links
+                a.top-links__item(href='#') Новый заказ
+                a.top-links__item.active(href='#') Мои заказы
+                a.top-links__item(href='#') Профиль
+                a.top-links__item(href='#') Пополнить баланс
+            .container-width
+                .order.order--detail
+                    h1.order-form__heading.main-heading Способ оплаты
+                    .order__left
+                        .payment
+                            .payment__accs
+                                //-   payment methods
+
+                    .order__right
+                        .total
+                            .total__link
+                                .total__link-img
+                                    img(data-src='images/sprite/insta.svg' alt='insta')
+                                a.total__link-text(target="_blank") instagram.com/p/CRpjCgUpoWM/
+                            .total__table
+                                //- items will appear here
+                            .total__price
+                                .total__price-text Итого
+                                .total__price-number.after-val 8890
+                            .total__controls
+                                button.btn.btn-light.submit-order(type='submit') Оплатить
+                                a.btn.btn-transparent(href="/#order-section") Редактировать
+

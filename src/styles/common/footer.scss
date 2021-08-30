@@ -1,0 +1,139 @@
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 2px solid #000000;
+    padding: 25px 0 55px 0;
+    box-sizing: border-box;
+
+    &__left {
+        @include media-tablet {
+            width: 75%;
+        }
+    }
+
+    &__right {
+        @include media-tablet {
+            width: 25%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+    }
+
+    @include media-tablet {
+        justify-content: space-between;
+        padding: 10px 0 45px 0;
+        .copyright {
+            margin-top: 15px;
+        }
+    }
+}
+
+.copyright {
+    font-size: 13px;
+    line-height: 19px;
+    color: #272727;
+}
+
+.wrap-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 4px;
+    @include media-tablet {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__link {
+        color: #272727;
+        margin-right: 10px;
+        font-size: 13px;
+        line-height: 19px;
+        position: relative;
+        @include media-tablet {
+            margin-right: 0;
+            &::after {
+                display: none;
+            }
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: '|';
+            position: absolute;
+            right: -6px;
+            top: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__heading {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #272727;
+        margin-right: 8px;
+        font-style: italic;
+        @include media-tablet {
+            display: none;
+        }
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid #272727;
+        box-sizing: border-box;
+        border-radius: 50%;
+        margin-right: 8px;
+
+        svg {
+            fill: #524F64;
+        }
+
+        &:hover {
+            opacity: .7;
+
+            svg {
+                fill: #ffffff;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
